@@ -4,3 +4,22 @@
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 
+// funzione per generare numeri
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * ((max + 1) - min) + min);   
+}
+
+// funzione per generare dei numeri da stampare
+function genNum (quantita){
+    let arr = [];
+
+    while(arr.length < quantita){
+        let number = getRandomNumber(1,100);
+        if( arr.includes(number) == false ) {
+            arr.push(number);
+        }
+    }
+    return arr;
+}
+
+
